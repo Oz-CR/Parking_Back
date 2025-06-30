@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  parking-api:
+    build: ..
+    container_name: parking-api
+    restart: always
+    ports:
+      - "3333:3333"
+    env_file:
+      - .env
+    networks:
+      - parking_pg_parking-network
+
+networks:
+  parking_pg_parking-network:
+    external: true
