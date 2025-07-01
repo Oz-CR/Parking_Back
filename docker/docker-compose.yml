@@ -10,8 +10,8 @@ services:
     env_file:
       - .env
     networks:
-      - parking_pg_parking-network
+      - parking_pg_postgres-network
 
 networks:
-  parking_pg_parking-network:
+  parking_pg_postgres-network:
     external: true
